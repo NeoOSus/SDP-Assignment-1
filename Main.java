@@ -1,26 +1,18 @@
 public class Main {
     public static void main(String[] args) {
 
-        ComputerBuilder gamingBuilder = new GamingPCBuilder();
-        Computer gamingPC = gamingBuilder
-                .setCpu("Intel i5 12th")
-                .setGpu("Nvidia RTX 3050")
-                .setRam(16)
-                .setStorage(500)
-                .build();
+        Director director = new Director();
 
+        ComputerBuilder gamingBuilder = new GamingPCBuilder();
+        director.constructStandartGamingPC(gamingBuilder);
+        Computer gamingPC = gamingBuilder.build();
         System.out.println("Gaming PC: ");
-        gamingPC.Config();
+        gamingPC.displayConfig();
 
         ComputerBuilder officeBuilder = new OfficePCBuilder();
-        Computer officePC = officeBuilder
-                .setCpu("Intel Pentium G5000")
-                .setGpu("Intel Gpaphics(Integrated)")
-                .setRam(8)
-                .setStorage(1000)
-                .build();
-
+        director.constructStandartOfficePC(officeBuilder);
+        Computer officePC = officeBuilder.build();
         System.out.println("Office PC: ");
-        officePC.Config();
+        officePC.displayConfig();
     }
 }
