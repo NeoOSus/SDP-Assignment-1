@@ -22,6 +22,7 @@ public class Computer {
         System.out.println("Videocard: " + gpu);
         System.out.println("RAM capacity: " + ram + "GB");
         System.out.println("Storage capacity: " + storage + "GB");
+        System.out.println("________________________");
     }
 
 }
