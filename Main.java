@@ -6,7 +6,7 @@ public class Main {
                 .setCpu("Intel i5 12th")
                 .setGpu("Nvidia RTX 3050")
                 .setRam(16)
-                .setStorage(500) //my laptop configs for example
+                .setStorage(500)
                 .build();
 
         System.out.println("Gaming PC: ");
